@@ -16,6 +16,8 @@ Determining the optimal capacity for battery storage is crucial for maximizing t
 <!-- The Household Battery Storage Capacity Calculator is a Python application designed to help household owners and installers to estimate, analyze the capacity and performance of battery storage systems in households making it easy for decision-making. It provides insights into energy distribution, financial analysis, and optimal storage capacity based on user-defined parameters. -->
 The Household Battery Storage Capacity Calculator is a Python application meticulously crafted to assist homeowners and installers in estimating and analyzing the capacity and performance of battery storage systems within households. This tool serves as a valuable asset, simplifying decision-making processes by providing comprehensive insights into energy distribution, financial analysis, and determining the optimal storage capacity. Whether you are planning to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices by customizing parameters to suit their unique needs and preferences.
 
+![BESS_GUI_Tool](Input_Files/GUI_Tool_image.png)
+
 ## Environment and Dependencies
 
 To set up the environment for running the tool, follow these steps:
