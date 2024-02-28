@@ -40,13 +40,18 @@ Limitations:
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
+- In the PV+BESS model, the maximum PV capacity is dependent on the feed-in tariff (FiT). If FiT is 8 and above, the maximum capacity is 10 kWp; otherwise, it is capped at 30 kWp, following amendments to the EEG considering partial feed-in.
+- The tool assumes a system lifetime of 25 years for PV and 10 years for Battery Storage.
+- The battery efficiency is set at 95% in the calculations.
+
 
 
 ## Environment and Dependencies
 
 To set up the environment for running the tool, follow these steps:
 
-1. **Create New Environment**
+1. **Create New Environment:**
+
     Creating a new environment is a good practice to manage dependencies and isolate your project. THe following link helps you with all the steps in order to create a new environment: https://realpython.com/python-virtual-environments-a-primer/
 
 2. **Install Dependencies:**
@@ -85,7 +90,7 @@ Thank you for considering contributing to the Household Battery Storage Capacity
 If you find this tool helpful in your work, please consider citing the following:
 
 ```
-@software{GUI: Optimal Home Storage Calculator,
+@software{EcoSizer: Optimal Home Solar + Battery Sizing Tool,
   author={Jayasurya Vardhan, Pujari},
   url={https://github.com/Jayasurya-Vardhan/Storage_optimization_Tool},
   year={2024},
@@ -100,14 +105,3 @@ If you find this tool helpful in your work, please consider citing the following
 }
 
 ```
-
-
-<!-- ## Importance of Optimal Sizing
-
-Determining the optimal capacities is crucial for maximizing these benefits. This tool aims to assist users in calculating the optimal PV+BESS and only storage capacity based on various parameters. -->
-
-
-
-
-<!-- 
-<p align="justify"> The EcoSizer is a Python application based on an OEMOF Storage_Investment optimization model, meticulously crafted to assist Homeowners and Installers in estimating the capacity of Solar and battery storage systems within households. This tool serves as a valuable asset, simplifying decision-making processes by providing comprehensive insights into energy distribution, financial analysis, and determining the optimal capacities. Whether you are planning to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices by customizing parameters to suit their unique needs and preferences. </p>\n -->

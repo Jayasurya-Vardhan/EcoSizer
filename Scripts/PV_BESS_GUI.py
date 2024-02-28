@@ -45,7 +45,7 @@ class EnergyModelApp(QWidget):
 
     """
     def init_ui(self):
-        self.setWindowTitle('Household PV+BESS Capacity Calculator')
+        self.setWindowTitle('EcoSizer: Optimal Home Solar + Battery Sizing Tool')
         self.setGeometry(100, 100, 1600, 920)
 
         # Create a splitter to divide the main window into three sections
@@ -612,7 +612,7 @@ class EnergyModelApp(QWidget):
         # Calculate cost savings and payback period
         cost_savings = yearly_energy_costs_conventional - energy_bill_grid_import + income_from_fit
         payback_period = total_investments / cost_savings
-        Disclaimer_text = "Disclaimer:  Results and Analysis are just an estimation, may slightly vary with real-world data"
+        Disclaimer_text = "Disclaimer:   Results and analysis are estimations and may vary in real-world scenarios"
         
         data = [
         ("Electricity Price", f"{electricity_price} €-cents/kWh"),
