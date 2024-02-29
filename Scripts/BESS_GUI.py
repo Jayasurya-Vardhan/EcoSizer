@@ -397,18 +397,18 @@ class EnergyModelApp(QWidget):
      
         # create datetime index and read input files
         logging.info("Initialize the energy system")
-        date_time_index = pd.date_range("1/1/2012", periods=8760, freq="H")
-        load_demand = pd.read_csv("Input_Files/Scaled_LP_1MW.csv", usecols=['h0'])
+        date_time_index = pd.date_range("1/1/2012", periods=8760, freq="h")
+        load_demand = pd.read_csv("Input_Files/Scaled_LP_H0.csv", usecols=['h0'])
         PV_feed = pd.read_csv("Input_Files/Scaled_PV_Feed_in.csv", usecols=['DC_Power','AC_Power'] )
 
         # Set Epc_Costs
         epc_storage = economics.annuity(capex=int(self.input_BESS_Capex.value()*100), n=10, wacc=0.03)
-        energysystem = solph.EnergySystem(timeindex=date_time_index)
+        energysystem = solph.EnergySystem(timeindex=date_time_index, infer_last_interval= False)
 
-        bel = solph.Bus(label="electricity")
+        bel = solph.buses.Bus(label="electricity")
 
         # create fixed source object representing pv system
-        pv = solph.Source(
+        pv = solph.components.Source(
             label="pv",
             outputs={
                 bel: solph.Flow(
@@ -419,7 +419,7 @@ class EnergyModelApp(QWidget):
         )
 
         # create simple sink object representing the electrical demand
-        demand = solph.Sink(
+        demand = solph.components.Sink(
             label="demand",
             inputs={bel: solph.Flow(
                 fix=load_demand['h0'],
@@ -427,12 +427,12 @@ class EnergyModelApp(QWidget):
             )}
         )
 
-        grid_supply = solph.Source(
+        grid_supply = solph.components.Source(
             label="grid_supply",
             outputs={bel: solph.Flow(variable_costs=self.electricity_price / 100)}
         )
 
-        grid_feed_in = solph.Sink(
+        grid_feed_in = solph.components.Sink(
             label="grid_feed_in",
             inputs={bel: solph.Flow(variable_costs=-self.feedin_price / 100)}
         )
