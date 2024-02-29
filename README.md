@@ -27,7 +27,8 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 <p align="justify"> Whether your goal is to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices. It allows for customization of parameters to suit unique needs and preferences, ensuring a tailored solution for each user.</p>
 
-__**Key Features:**__
+**Key Features:**
+=================
 
 **EcoSizer Storage**
 
@@ -41,7 +42,8 @@ __**Key Features:**__
 ![BESS_GUI_Tool](Input_Files/PV_BESS_GUI_tool.png)
 
 
-__**Limitations:**__
+**Limitations:**
+----------------
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
