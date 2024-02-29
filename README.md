@@ -1,6 +1,8 @@
 # EcoSizer: Optimal Home Solar + Battery Sizing Tool
+----
 
 ## Introduction
+---
 
 Household PV and Battery Storage Systems are becoming increasingly important in the modern energy landscape, providing numerous advantages such as:
 
@@ -12,6 +14,7 @@ Household PV and Battery Storage Systems are becoming increasingly important in 
 - **Grid Support:** Can contribute excess energy back to the grid, supporting overall grid stability.
 
 ## Importance of Optimal Sizing
+---
 
 Determining the optimal capacities is crucial for maximizing these benefits. This tool aims to assist users in calculating the optimal PV+BESS and only storage capacity based on various parameters.
 
@@ -22,6 +25,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
   - Reliable Energy Supply: A carefully sized system guarantees a reliable energy supply. An oversized system can meet demand, while an undersized one may lead to insufficient electricity supply. Achieving optimal benefits requires a balance in system sizing [[11]].
 
 ## About the Tool
+---
 
 <p align="justify"> The EcoSizer is a Python application offering two distinct tools tailored to meet specific needs. Firstly, it includes an OEMOF Storage_Investment optimization model designed for homeowners and installers aiming to estimate the optimal battery storage capacity for an existing PV system. Secondly, for those planning a new setup, the tool assists in determining the optimal capacities for both PV and BESS within households. This comprehensive solution simplifies decision-making by providing insights into energy distribution, financial analysis, and the most efficient capacities for solar and battery storage.</p>
 
@@ -29,7 +33,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 **Key Features:**
 
----
+--
 
 **EcoSizer Storage**
 
@@ -45,7 +49,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 **Limitations:**
 
----
+--
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
@@ -55,6 +59,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 
 ## Download Tool
+---
 
 ### For Non-Programmers
 
@@ -66,6 +71,7 @@ If you don't have a programming background, no worries! We've prepared a user-fr
 
 
 ## Environment and Dependencies
+---
 
 To set up the environment for running the tool, follow these steps:
 
@@ -94,6 +100,7 @@ To set up the environment for running the tool, follow these steps:
     ```
 
 ## Contributions
+---
 
 Any kind of contributions to the project are welcome! If you would like to contribute, please follow these guidelines:
 
@@ -104,6 +111,7 @@ Any kind of contributions to the project are welcome! If you would like to contr
 Thank you for considering contributing to the Household Battery Storage Capacity Calculator!
 
 ## Citation
+---
 
 If you find this tool helpful in your work, please consider citing the following:
 
