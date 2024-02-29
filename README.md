@@ -27,20 +27,25 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 <p align="justify"> Whether your goal is to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices. It allows for customization of parameters to suit unique needs and preferences, ensuring a tailored solution for each user.</p>
 
-Key Features:
+**Key Features:**
 
-**EcoSizer StoragePro**
+---
 
-- Estimate optimal battery capacity for an existing PV system.
+**EcoSizer Storage**
+
+- Determines optimal battery capacity for an existing PV system.
 ![BESS_GUI_Tool](Input_Files/BESS_GUI_tool.png)
+
 
 **EcoSizer SunVault**
 
-- Determine optimal capacities for both PV and BESS in new household setups.
+- Determines optimal capacities for both PV and BESS in new household setups.
 ![BESS_GUI_Tool](Input_Files/PV_BESS_GUI_tool.png)
 
 
-Limitations:
+**Limitations:**
+
+---
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
@@ -57,17 +62,7 @@ If you don't have a programming background, no worries! We've prepared a user-fr
 
 [Download EcoSizer for Non-Programmers](#) <!-- Replace # with the actual download link -->
 
----
-
-### For Developers and Advanced Users
-
-If you have programming skills and want to explore or contribute to the source code, you can find the project on GitHub. Feel free to check it out, contribute, or raise issues:
-
-[GitHub Repository: EcoSizer](https://github.com/yourusername/yourrepository)
-
----
-
-**Note:** Ensure you have Python installed to run the source code version. The executable file is included in the user-friendly version for non-programmers.
+**Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored. 
 
 
 ## Environment and Dependencies
@@ -81,9 +76,8 @@ To set up the environment for running the tool, follow these steps:
 2. **Install Dependencies:**
    
     ```bash
-    pip install oemof.solph
+    pip install oemof.solph = 0.5.2
     pip install PyQt5
-    pip install pandas
     pip install plotly
     ```
     To make the oemof-solph optimization model work, you need to set up a solver. The steps for installing this solver vary depending on the type of computer you're using. Here's a guide to help you through the installation process on different operating systems. https://oemof-solph.readthedocs.io/en/stable/readme.html#contents or https://youtu.be/eFvoM36_szM?si=3pRmnGV7J129kBKo
@@ -116,7 +110,7 @@ If you find this tool helpful in your work, please consider citing the following
 ```
 @software{EcoSizer: Optimal Home Solar + Battery Sizing Tool,
   author={Jayasurya Vardhan, Pujari},
-  url={https://github.com/Jayasurya-Vardhan/Storage_optimization_Tool},
+  url={https://github.com/Jayasurya-Vardhan/EcoSizer.git},
   year={2024},
   note={Accessed: Date},
   version={1.0},
@@ -129,3 +123,15 @@ If you find this tool helpful in your work, please consider citing the following
 }
 
 ```
+
+
+<!-- 
+### For Developers and Advanced Users
+
+If you have programming skills and want to explore or contribute to the source code, you can find the project on GitHub. Feel free to check it out, contribute, or raise issues:
+
+[GitHub Repository: EcoSizer](https://github.com/yourusername/yourrepository)
+
+---
+
+**Note:** Ensure you have Python installed to run the source code version. The executable file is included in the user-friendly version for non-programmers. -->
