@@ -29,8 +29,12 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 Key Features:
 
+**EcoSizer StoragePro**
+
 - Estimate optimal battery capacity for an existing PV system.
 ![BESS_GUI_Tool](Input_Files/BESS_GUI_tool.png)
+
+**EcoSizer SunVault**
 
 - Determine optimal capacities for both PV and BESS in new household setups.
 ![BESS_GUI_Tool](Input_Files/PV_BESS_GUI_tool.png)
@@ -44,6 +48,26 @@ Limitations:
 - The tool assumes a system lifetime of 25 years for PV and 10 years for Battery Storage.
 - The battery efficiency is set at 95% in the calculations.
 
+
+## Download Tool
+
+### For Non-Programmers
+
+If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
+
+[Download EcoSizer for Non-Programmers](#) <!-- Replace # with the actual download link -->
+
+---
+
+### For Developers and Advanced Users
+
+If you have programming skills and want to explore or contribute to the source code, you can find the project on GitHub. Feel free to check it out, contribute, or raise issues:
+
+[GitHub Repository: EcoSizer](https://github.com/yourusername/yourrepository)
+
+---
+
+**Note:** Ensure you have Python installed to run the source code version. The executable file is included in the user-friendly version for non-programmers.
 
 
 ## Environment and Dependencies
