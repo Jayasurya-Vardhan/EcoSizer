@@ -28,22 +28,21 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 <p align="justify"> Whether your goal is to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices. It allows for customization of parameters to suit unique needs and preferences, ensuring a tailored solution for each user.</p>
 
 **Key Features:**
-=================
 
-**EcoSizer Storage**
+
+*EcoSizer Storage*
 
 - Determines optimal battery capacity for an existing PV system.
 ![BESS_GUI_Tool](Input_Files/BESS_GUI_tool.png)
 
 
-**EcoSizer SunVault**
+*EcoSizer SunVault*
 
 - Determines optimal capacities for both PV and BESS in new household setups.
 ![BESS_GUI_Tool](Input_Files/PV_BESS_GUI_tool.png)
 
 
 **Limitations:**
-----------------
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
@@ -58,7 +57,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
 
-[Download EcoSizer](https://www.dropbox.com/scl/fo/9dydcmdy9d8ipssk24r83/h?rlkey=sinfhvunw2lu99107n6eeziqm&dl=0) <!-- Replace # with the actual download link -->
+[Download EcoSizer](https://www.dropbox.com/scl/fo/gzrwrflunfsfqv6ozslq9/h?rlkey=5bunyx1fv78n6x91gsh20x4h7&dl=0) <!-- Replace # with the actual download link -->
 
 **Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored. 
 
@@ -78,7 +77,7 @@ To set up the environment for running the tool, follow these steps:
     pip install PyQt5
     pip install plotly
     ```
-    To make the oemof-solph optimization model work, you need to set up a solver. The steps for installing this solver vary depending on the type of computer you're using. Here's a guide to help you through the installation process on different operating systems. https://oemof-solph.readthedocs.io/en/stable/readme.html#contents or https://youtu.be/eFvoM36_szM?si=3pRmnGV7J129kBKo
+    To make the oemof-solph optimization model work, you need to set up a solver. The steps for installing this solver vary depending on the system type you're using. Here's a guide to help you through the installation process on different operating systems. https://oemof-solph.readthedocs.io/en/stable/readme.html#contents or https://youtu.be/eFvoM36_szM?si=3pRmnGV7J129kBKo
 
 3. **Clone the Repository:**
     ```bash
@@ -93,13 +92,13 @@ To set up the environment for running the tool, follow these steps:
 
 ## Contributions
 
-Any kind of contributions to the project are welcome! If you would like to contribute, please follow these guidelines:
+Any kind of contributions to the project are welcome! This can help in enhancing the tool and make it more user-friendly. If you would like to contribute, please follow these guidelines:
 
 - Fork the repository and create a new branch for your feature or bug fix.
 - Make your changes and submit a pull request.
 - Provide a clear and detailed description of your changes.
 
-Thank you for considering contributing to the Household Battery Storage Capacity Calculator!
+Thank you for considering contributing to the EcoSizer!
 
 ## Citation
 
