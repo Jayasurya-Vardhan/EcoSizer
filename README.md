@@ -58,7 +58,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
 
-[Download EcoSizer for Non-Programmers](#) <!-- Replace # with the actual download link -->
+[Download EcoSizer](https://www.dropbox.com/scl/fo/9dydcmdy9d8ipssk24r83/h?rlkey=sinfhvunw2lu99107n6eeziqm&dl=0) <!-- Replace # with the actual download link -->
 
 **Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored. 
 
