@@ -4,12 +4,11 @@
 
 Household PV and Battery Storage Systems are becoming increasingly important in the modern energy landscape, providing numerous advantages such as:
 
-- **Self-Consumption:** Maximizes direct use of energy produced by your own PV system.
-- **Self-Sufficiency:** Enhances self-sufficiency by reducing dependence on external energy sources.
-- **Energy Independence:** Allows households to generate and store their own electricity.
-- **Cost Savings:** Reduces reliance on grid electricity during peak hours, saving money.
-- **Environmental Impact:** Promotes the use of renewable energy sources and lowers carbon footprint.
-- **Grid Support:** Can contribute excess energy back to the grid, supporting overall grid stability.
+- **Self-Consumption:** Use more of the clean energy you generate directly, reducing your reliance on the grid.
+- **Become Energy Independent:** Generate and store your own electricity, increasing self-sufficiency.
+- **Save Money on Electricity Bills:** Reduce reliance on expensive grid power, especially during peak hours.
+- **Reduce Your Environmental Impact:** Generate clean energy and lower your carbon footprint.
+- **Support a Stable Grid:** Contribute excess energy back to the grid, benefiting everyone.
 
 ## Importance of Optimal Sizing
 
@@ -19,7 +18,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
   - Avoiding Wastage: Inadequate sizing can lead to energy wastage and increased operational costs. Optimal sizing helps avoid unnecessary resource use and financial expenditures.
 
-  - Reliable Energy Supply: A carefully sized system guarantees a reliable energy supply. An oversized system can meet demand, while an undersized one may lead to insufficient electricity supply. Achieving optimal benefits requires a balance in system sizing [[11]].
+  - Reliable Energy Supply: A carefully sized system guarantees a reliable energy supply. An oversized system can meet demand, while an undersized one may lead to insufficient electricity supply. Achieving optimal benefits requires a balance in system sizing.
 
 ## About the Tool
 
@@ -57,9 +56,9 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
 
-[Download EcoSizer](https://www.dropbox.com/scl/fo/gzrwrflunfsfqv6ozslq9/h?rlkey=5bunyx1fv78n6x91gsh20x4h7&dl=0) <!-- Replace # with the actual download link -->
+[Download EcoSizer](https://drive.google.com/drive/folders/1ZwCdGMewUkHQdYEq0MY5FNlEeiuNDQRn?usp=sharing) 
 
-**Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored. 
+**Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored.
 
 
 ## Environment and Dependencies
@@ -132,3 +131,11 @@ If you have programming skills and want to explore or contribute to the source c
 ---
 
 **Note:** Ensure you have Python installed to run the source code version. The executable file is included in the user-friendly version for non-programmers. -->
+
+
+<!-- 1. Self-Consumption: Maximize direct use of your homegrown clean energy. (This emphasizes ownership and environmentally friendly aspect)
+2. Energy Independence: Become your own power plant and generate electricity for your needs. (This highlights self-reliance and empowerment)
+3. Self-Sufficiency: Reduce dependence on external sources and achieve greater energy autonomy. (This focuses on the broader concept of self-sufficiency and avoiding vulnerability)
+4. Cost Savings: Lower your electricity bills by relying less on the grid, especially during peak hours. (This clarifies the benefit and mentions the specific timeframe)
+5. Environmental Impact: Contribute to a cleaner planet by harnessing sustainable energy and reducing your carbon footprint. (This emphasizes the positive environmental impact and mentions a specific metric)
+6. Grid Support: Help stabilize the grid by injecting excess clean energy back into the system when possible. (This clarifies the specific contribution and mentions the condition) -->
