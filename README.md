@@ -57,6 +57,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
 
 [Download EcoSizer](https://www.dropbox.com/scl/fi/r23cbmbb2z47ga39mcz8j/BESS_GUI.exe?rlkey=cb10v16bh4xa6jyw0h3dpcdfr&dl=0) 
+[New Link](https://www.dropbox.com/scl/fo/xrbs1qls88lvhed79xuvj/h?rlkey=hrayw3vfis21va1jk25j0f2qs&dl=0)
 
 **Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored.
 
