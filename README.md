@@ -22,7 +22,7 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 ## About the Tool
 
-<p align="justify"> The EcoSizer is a Python application offering two distinct tools tailored to meet specific needs. Firstly, it includes an OEMOF Storage_Investment optimization model designed for homeowners and installers aiming to estimate the optimal battery storage capacity for an existing PV system. Secondly, for those planning a new setup, the tool assists in determining the optimal capacities for both PV and BESS within households. This comprehensive solution simplifies decision-making by providing insights into energy distribution, financial analysis, and the most efficient capacities for solar and battery storage.</p>
+<p align="justify"> The EcoSizer is a Python application offering two distinct tools tailored to meet specific needs. It is completely based on an OEMOF Investment Optimization model designed for homeowners and installers aiming to estimate the optimal battery storage capacity for an existing PV system. Secondly, for those planning a new setup, the tool also assists in determining the optimal capacities for both PV and BESS within households. This comprehensive solution simplifies decision-making by providing insights into energy distribution, financial analysis, and the most efficient capacities for solar and battery storage.</p>
 
 <p align="justify"> Whether your goal is to enhance energy independence, reduce costs, or contribute to environmental sustainability, this calculator empowers users to make informed choices. It allows for customization of parameters to suit unique needs and preferences, ensuring a tailored solution for each user.</p>
 
@@ -48,19 +48,19 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 - In the PV+BESS model, the maximum PV capacity is dependent on the feed-in tariff (FiT). If FiT is 8 and above, the maximum capacity is 10 kWp; otherwise, it is capped at 30 kWp, following amendments to the EEG considering partial feed-in.
 - The tool assumes a system lifetime of 25 years for PV and 10 years for Battery Storage.
 - The battery efficiency is set at 95% in the calculations.
+- The tool is set to use "glpk" solver for optimization and the Solver settings are currently compatible only with Windows. This restricts usage for users on macOS and Linux systems.
 
 
 ## Download Tool
 
-### For Non-Programmers
-
 If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
 
-[Download EcoSizer](https://www.dropbox.com/scl/fi/r23cbmbb2z47ga39mcz8j/BESS_GUI.exe?rlkey=cb10v16bh4xa6jyw0h3dpcdfr&dl=0) 
-[New Link](https://www.dropbox.com/scl/fo/xrbs1qls88lvhed79xuvj/h?rlkey=hrayw3vfis21va1jk25j0f2qs&dl=0)
+[Click here to download EcoSizer](https://github.com/Jayasurya-Vardhan/EcoSizer/releases)
 
-**Note:** When executing the file you may notice a brief appearance of a Command Prompt or Console window. Please be assured that this is a normal part of the process and can be safely ignored.
+**Note:** 
 
+- Before using the application, make sure to read the EcoSizer User Guide [EcoSizer_User_Guide.pdf] for clear instructions on how to operate the tools effectively.
+- The application will be updated and released as a new version when a major new feature is introduced that enhances functionality or user experience.
 
 ## Environment and Dependencies
 
@@ -81,7 +81,7 @@ To set up the environment for running the tool, follow these steps:
 
 3. **Clone the Repository:**
     ```bash
-    git clone https://github.com/Jayasurya-Vardhan/Storage_optimization_Tool.git
+    git clone https://github.com/Jayasurya-Vardhan/EcoSizer.git
     ```
 
 4. **Run the Application:**
@@ -120,23 +120,3 @@ If you find this tool helpful in your work, please consider citing the following
 }
 
 ```
-
-
-<!-- 
-### For Developers and Advanced Users
-
-If you have programming skills and want to explore or contribute to the source code, you can find the project on GitHub. Feel free to check it out, contribute, or raise issues:
-
-[GitHub Repository: EcoSizer](https://github.com/yourusername/yourrepository)
-
----
-
-**Note:** Ensure you have Python installed to run the source code version. The executable file is included in the user-friendly version for non-programmers. -->
-
-
-<!-- 1. Self-Consumption: Maximize direct use of your homegrown clean energy. (This emphasizes ownership and environmentally friendly aspect)
-2. Energy Independence: Become your own power plant and generate electricity for your needs. (This highlights self-reliance and empowerment)
-3. Self-Sufficiency: Reduce dependence on external sources and achieve greater energy autonomy. (This focuses on the broader concept of self-sufficiency and avoiding vulnerability)
-4. Cost Savings: Lower your electricity bills by relying less on the grid, especially during peak hours. (This clarifies the benefit and mentions the specific timeframe)
-5. Environmental Impact: Contribute to a cleaner planet by harnessing sustainable energy and reducing your carbon footprint. (This emphasizes the positive environmental impact and mentions a specific metric)
-6. Grid Support: Help stabilize the grid by injecting excess clean energy back into the system when possible. (This clarifies the specific contribution and mentions the condition) -->
