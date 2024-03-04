@@ -3,7 +3,7 @@ EnergyModelApp Module
 
 This module defines the EnergyModelApp class, which represents the main application window
 for the Household Battery Storage Capacity Calculator. The application includes sections for
-configuring parameters, displaying optimal storage capacity, visualizing energy distribution,
+configuring parameters, displaying optimal Storage capacity, visualizing energy distribution,
 and performing financial analysis.
 
 The module contains the following components:
@@ -45,7 +45,7 @@ class EnergyModelApp(QWidget):
 
     """
     def init_ui(self):
-        self.setWindowTitle('EcoSizer: Optimal Home Solar + Battery Sizing Tool')
+        self.setWindowTitle('EcoSizer Storage')
         self.setGeometry(100, 100, 1600, 920)
 
         # Create a splitter to divide the main window into three sections
@@ -351,8 +351,8 @@ class EnergyModelApp(QWidget):
                 self.run_simulation()
             except Exception as e:
                 logging.error(f"Error during simulation: {e}")
-                self.btn_run_simulation.setFixedSize(250, 30)
-                self.btn_run_simulation.setText("Simulation Failure due to an error....")
+                self.btn_run_simulation.setFixedSize(320, 30)
+                self.btn_run_simulation.setText("Simulation Failed due to an error, Report Issue....")
         else:
             pass
     
@@ -386,7 +386,8 @@ class EnergyModelApp(QWidget):
         #================#
         logger.define_logging()
         logging.info('Simulation Started')
-        self.btn_run_simulation.setText('Simulating.....') # change status when simulation is running
+        self.btn_run_simulation.setFixedSize(280, 30)
+        self.btn_run_simulation.setText('Simulation in Progress.....') # change status when simulation is running
         QApplication.processEvents()
         
         # read input values from sliders
@@ -422,7 +423,7 @@ class EnergyModelApp(QWidget):
         demand = solph.components.Sink(
             label="demand",
             inputs={bel: solph.Flow(
-                fix=load_demand['h0'],
+                fix=load_demand['h01'],
                 nominal_value=self.annual_demand,
             )}
         )
@@ -459,7 +460,10 @@ class EnergyModelApp(QWidget):
 
         # if tee_switch is true solver messages will be displayed
         logging.info("Solve the optimization problem")
-        om.solve(solver="cbc", solve_kwargs={"tee": False})
+        om.solve(solver="glpk", solve_kwargs={"tee": False})
+        
+        self.btn_run_simulation.setText('Simulation Finished, Updating Results.....') 
+        QApplication.processEvents()
         
         # check if the new result object is working for custom components
         results = solph.processing.results(om)
@@ -547,6 +551,7 @@ class EnergyModelApp(QWidget):
         self.grahics_view.setHtml(self.fig.to_html(include_plotlyjs='cdn'))
         self.Storage_output.setText(self.optimal_Storage)
         self.grahics_view.show()
+        self.btn_run_simulation.setFixedSize(160, 30)
         self.btn_run_simulation.setText("Run Simulation")
         self.btn_run_simulation.setCheckable(False)
         self.btn_run_simulation.setCheckable(True)
@@ -602,7 +607,7 @@ class EnergyModelApp(QWidget):
         # Calculate cost savings and payback period
         cost_savings = yearly_energy_costs_conventional - energy_bill_grid_import + income_from_fit
         payback_period = total_investments / cost_savings
-        Disclaimer_text = "Disclaimer:  Results and analysis are estimations and may vary in real-world scenarios"
+        Disclaimer_text = "Disclaimer:  Results and analysis are just estimations and may vary in real-world scenarios"
         
         data = [
         ("Electricity Price", f"{electricity_price} €-cents/kWh"),

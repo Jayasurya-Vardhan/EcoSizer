@@ -54,13 +54,13 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 ## Download Tool
 
-If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below to download the tool, which includes an executable file:
+If you don't have a programming background, no worries! We've prepared a user-friendly version of EcoSizer for you. Simply click the link below and download the file EcoSizer.zip:
 
 [Click here to download EcoSizer](https://github.com/Jayasurya-Vardhan/EcoSizer/releases)
 
 **Note:** 
 
-- Before using the application, make sure to read the [EcoSizer_User_Guide.pdf](https://github.com/Jayasurya-Vardhan/EcoSizer/blob/main/EcoSizer_User_Guide.pdf) for clear instructions on how to operate the tools effectively.
+- Before using the application, make sure to read the [EcoSizer_User_Guide](https://github.com/Jayasurya-Vardhan/EcoSizer/blob/main/EcoSizer_User_Guide.pdf) for clear instructions on how to operate the tools effectively.
 - The application will be updated and released as a new version when a major new feature is introduced that enhances functionality or user experience.
 
 ## Environment and Dependencies

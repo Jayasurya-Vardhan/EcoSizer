@@ -3,7 +3,7 @@ EnergyModelApp Module
 
 This module defines the EnergyModelApp class, which represents the main application window
 for the Household Battery Storage Capacity Calculator. The application includes sections for
-configuring parameters, displaying optimal storage capacity, visualizing energy distribution,
+configuring parameters, displaying optimal Pv and Storage capacity, visualizing energy distribution,
 and performing financial analysis.
 
 The module contains the following components:
@@ -352,8 +352,8 @@ class EnergyModelApp(QWidget):
                 self.run_simulation()
             except Exception as e:
                 logging.error(f"Error during simulation: {e}")
-                self.btn_run_simulation.setFixedSize(250, 30)
-                self.btn_run_simulation.setText("Simulation Failure due to an error....")
+                self.btn_run_simulation.setFixedSize(320, 30)
+                self.btn_run_simulation.setText("Simulation Failed due to an error, Report Issue....")
         else:
             pass
     
@@ -387,7 +387,8 @@ class EnergyModelApp(QWidget):
         #================#
         logger.define_logging()
         logging.info('Simulation Started')
-        self.btn_run_simulation.setText('Simulating.....') # change status when simulation is running
+        self.btn_run_simulation.setFixedSize(280, 30)
+        self.btn_run_simulation.setText('Simulation in Progress.....') # change status when simulation is running
         QApplication.processEvents()
         
         # read input values from sliders
@@ -466,7 +467,10 @@ class EnergyModelApp(QWidget):
 
         # if tee_switch is true solver messages will be displayed
         logging.info("Solve the optimization problem")
-        om.solve(solver="cbc", solve_kwargs={"tee": False})
+        om.solve(solver="glpk", solve_kwargs={"tee": False})
+        
+        self.btn_run_simulation.setText('Simulation Finished, Updating Results.....') 
+        QApplication.processEvents()
         
         # check if the new result object is working for custom components
         results = solph.processing.results(om)
@@ -488,8 +492,8 @@ class EnergyModelApp(QWidget):
         # Calculate Special Parameters
         self_consumption = (nodes['Pv_feed_in'].sum() - nodes['grid_feed_in'].sum())/ nodes['Pv_feed_in'].sum()
         self_sufficiency = (nodes['demand'].sum() - nodes['grid_supply'].sum())/ nodes['demand'].sum()
-        self.PV_capacity= results[(pv, bel)]["scalars"]["invest"] 
-        self.storage_capacity =  my_results["storage_invest_KWh"]
+        self.PV_capacity= round(results[(pv, bel)]["scalars"]["invest"],2)
+        self.storage_capacity =  round(my_results["storage_invest_KWh"],2)
         Total_self_consumption = round(self_consumption * 100, 2)
         Total_self_sufficiency = round(self_sufficiency * 100, 2)
         self.Total_Pv_production = nodes['Pv_feed_in'].sum()
@@ -497,8 +501,8 @@ class EnergyModelApp(QWidget):
         self.Grid_Import = nodes['grid_supply'].sum()
         self.feed_in_percentage = (self.Grid_feed_in/ self.Total_Pv_production) * 100
         self.Total_Demand = self.annual_demand*1000
-        self.optimal_PV = f'{round(self.PV_capacity,2)} KWp'
-        self.optimal_Storage = f'{round(self.storage_capacity,2)} KWh'
+        self.optimal_PV = f'{self.PV_capacity} KWp'
+        self.optimal_Storage = f'{self.storage_capacity} KWh'
         
         
         # Plots Section
@@ -557,6 +561,7 @@ class EnergyModelApp(QWidget):
         self.PV_output.setText(self.optimal_PV)
         self.Storage_output.setText(self.optimal_Storage)
         self.grahics_view.show()
+        self.btn_run_simulation.setFixedSize(160, 30)
         self.btn_run_simulation.setText("Run Simulation")
         self.btn_run_simulation.setCheckable(False)
         self.btn_run_simulation.setCheckable(True)
@@ -612,7 +617,7 @@ class EnergyModelApp(QWidget):
         # Calculate cost savings and payback period
         cost_savings = yearly_energy_costs_conventional - energy_bill_grid_import + income_from_fit
         payback_period = total_investments / cost_savings
-        Disclaimer_text = "Disclaimer:   Results and analysis are estimations and may vary in real-world scenarios"
+        Disclaimer_text = "Disclaimer:   Results and analysis are jsut estimations and may vary in real-world scenarios"
         
         data = [
         ("Electricity Price", f"{electricity_price} €-cents/kWh"),
