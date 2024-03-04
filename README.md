@@ -45,10 +45,11 @@ Determining the optimal capacities is crucial for maximizing these benefits. Thi
 
 - Maximum PV capacity considered is up to 30 kWp, catering to typical household scenarios.
 - The PV feed-in profile is based on the location from the central part of Germany, impacting the tool's accuracy in regions with      significantly different solar profiles.
+- For Energy demand a standard Household BDEW Profile is used. 
 - In the PV+BESS model, the maximum PV capacity is dependent on the feed-in tariff (FiT). If FiT is 8 and above, the maximum capacity is 10 kWp; otherwise, it is capped at 30 kWp, following amendments to the EEG considering partial feed-in.
 - The tool assumes a system lifetime of 25 years for PV and 10 years for Battery Storage.
 - The battery efficiency is set at 95% in the calculations.
-- The tool is set to use "glpk" solver for optimization and the Solver settings are currently compatible only with Windows. This restricts usage for users on macOS and Linux systems.
+- The tool is set to use "GLPK" solver for optimization and the solver settings are currently compatible only with Windows. This restricts usage for users on macOS and Linux systems.
 
 
 ## Download Tool
@@ -59,7 +60,7 @@ If you don't have a programming background, no worries! We've prepared a user-fr
 
 **Note:** 
 
-- Before using the application, make sure to read the EcoSizer User Guide [EcoSizer_User_Guide.pdf] for clear instructions on how to operate the tools effectively.
+- Before using the application, make sure to read the [EcoSizer_User_Guide.pdf](https://github.com/Jayasurya-Vardhan/EcoSizer/blob/main/EcoSizer_User_Guide.pdf) for clear instructions on how to operate the tools effectively.
 - The application will be updated and released as a new version when a major new feature is introduced that enhances functionality or user experience.
 
 ## Environment and Dependencies
